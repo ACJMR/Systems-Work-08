@@ -1,5 +1,5 @@
 all: sieve.o
-	gcc sieve.o
+	gcc sieve.o -lm
 
 sieve.o: sieve.c
 	gcc -c sieve.c
