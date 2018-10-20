@@ -3,27 +3,33 @@
 #include <math.h>
 
 int sieve(int n){
-  int size = n * log(n*1.0) * 1.15;
+  int size = 100;
   int ray[size];
+  for(int n = 0; n<size; n++){
+      ray[n] = 0;
+  }
   int count = 0;
   int focus = 2;
   int i = 2;
   while(count<n){
     if (!ray[focus]){
       while(focus*i<size){
-	ray[focus*i] = 1;
-	i++;
+	       ray[focus*i] = 1;
+	       i++;
       }
       count++;
       i = 2;
-    } // 0 in slot -- prime
+    }
     focus++;
   }
-  return ray[focus];
+  return focus-1;
 }
 
 
 int main(){
-  printf("5th prime: %d\n",sieve(5));
+  printf("5th prime: %d\n",sieve(1000000));
 
 }
+
+
+
