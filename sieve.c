@@ -24,12 +24,3 @@ int sieve(int n){
   }
   return focus-1;
 }
-
-
-int main(){
-  printf("5th prime: %d\n",sieve(1000000));
-
-}
-
-
-
