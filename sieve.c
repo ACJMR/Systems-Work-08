@@ -3,7 +3,7 @@
 #include <math.h>
 
 int sieve(int n){
-  int size = 100;
+  int size = n*log(n)*1.15;
   int ray[size];
   for(int n = 0; n<size; n++){
       ray[n] = 0;
